@@ -1,3 +1,5 @@
 # HeadEditor
-Head Editor for the game 4d Sports Boxing
-![alt text](https://github.com/postmortem1/HeadEditor/blob/master/screenshot.png)
+Updated editor for the game 4d Sports Boxing. Reads, edits and saves headX.dat files.
+
+Requires Python 3.9 & PyQt5.
+![alt text](https://github.com/postcode-x/head-editor/blob/master/screenshot.png)
