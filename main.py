@@ -339,6 +339,8 @@ class MainWindow(QtWidgets.QWidget):
                 points_y = []
                 points_z = []
 
+                print(len(points), points)
+
                 for n in range(0, int(len(points) / 3)):
                     points_x.append(points[3 * n])
                     points_y.append(points[3 * n + 1])
@@ -458,10 +460,11 @@ class MainWindow(QtWidgets.QWidget):
                     face_z.append(self.z_[current_faces[i][n]])
                 color = current_faces[i][-1]
                 vertices = [list(zip(face_x, face_z, face_y))]
+                print(len(current_faces), vertices)
                 self.axes.add_collection3d(Poly3DCollection(vertices, facecolors=color + 'ff', zorder=0))
 
             for k in range(0, len(self.x_)):
-                self.axes.text3D(self.x_[k], self.z_[k], self.y_[k], str(k), color='black', fontsize=5, alpha=0.7,
+                self.axes.text3D(self.x_[k], self.z_[k], self.y_[k], str(k), color='black', fontsize=8, alpha=0.7,
                                  zorder=50)
 
         self.canvas.draw_idle()
